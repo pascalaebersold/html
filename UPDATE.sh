@@ -4,4 +4,4 @@ sudo mv /var/www/html /var/www/htmlold
 sudo mv /var/www/htmlnew /var/www/html
 sudo rm -r /var/www/htmlold
 sudo chmod u+x /var/www/html/UPDATE.sh
-DISPLAY=:0 xdotool search --desktop 0 'chromium-browser' windowactivate key Ctrl+f5
+DISPLAY=:0 xdotool search --desktop 0 'chromium-browser' windowactivate key Ctrl+F5
