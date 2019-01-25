@@ -2,7 +2,7 @@
 <html><head>
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"><meta http-equiv="Pragma" content="no-cache"><meta http-equiv="Expires" content="0"><meta charset="utf-8">
   <title>undefined</title>
-  <meta name="generator" content="Google Web Designer 5.0.1.1129">
+  <meta name="generator" content="Google Web Designer 5.0.2.0115">
   <meta name="template" content="Expandable 3.0.0">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="gwdpage_style.css" rel="stylesheet" data-version="12" data-exports-type="gwd-page">
@@ -430,6 +430,36 @@ body {
 .gwd-imagebutton-fcjm {
     left: 544px;
     top: 217px;
+}
+.gwd-progress-ring-1hlv {
+    left: 262px;
+    top: 120px;
+}
+.gwd-progress-ring-1oer {
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    position: relative;
+    left: 250px;
+    top: 91px;
+}
+.gwd-p-o4qp {
+    left: 435px;
+    top: 265px;
+}
+.gwd-p-gxbq {
+    position: absolute;
+    font-family: Arial;
+    width: 83px;
+    height: 51px;
+    transform-origin: 0px 24.0833px 0px;
+    -webkit-transform-origin: 0px 24.0833px 0px;
+    -moz-transform-origin: 0px 24.0833px 0px;
+    font-weight: bold;
+    color: rgb(180, 180, 180);
+    font-size: 35px;
+    left: 720px;
+    top: 420px;
 }</style>
   <script data-source="googbase_min.js" data-version="4" data-exports-type="googbase" src="googbase_min.js"></script>
   <script data-source="gwd_webcomponents_min.js" data-version="6" data-exports-type="gwd_webcomponents" src="gwd_webcomponents_min.js"></script>
@@ -705,7 +735,7 @@ body {
 <style type="text/css">#pagedeck { overflow: hidden !important; }</style></head>
 
 <body class="document-body" onload="startTime()">
-  <gwd-pagedeck class="gwd-page-container" id="pagedeck">
+  <gwd-pagedeck class="gwd-page-container" id="pagedeck" data-gwd-offset-top="0px" data-gwd-offset-left="0px">
     <gwd-page id="page1" class="gwd-page-wrapper page1-content gwd-lightbox gwd-page-1ud7" data-gwd-width="800px" data-gwd-height="480px">
       <div class="gwd-page-content page1-content gwd-div-mxhr">
         <gwd-imagebutton id="gwd-imagebutton_1" up-image="Settings_Button_2.png" over-image="Settings_Button_On.png" down-image="Settings_Button_On.png" scaling="auto" class="gwd-imagebutton-1hin" alignment="right" data-gwd-name="Settings"></gwd-imagebutton>
@@ -718,9 +748,85 @@ body {
         <p class="gwd-p-gjop gwd-p-mct7 gwd-p-sh0i gwd-p-j9kx">SAT</p>
         <p class="gwd-p-gjop gwd-p-mct7 gwd-p-sh0i gwd-p-5q25">SUN</p>
         <p class="gwd-p-v9sc" id="date0_0"></p>
-        <p class="gwd-p-5qd6" id="date0"><br>
+        <p class="gwd-p-5qd6 gwd-p-o4qp" id="date0"><br>
           
         </p>
+        <progress-ring stroke="20" radius="150" progress="0" class="gwd-progress-ring-1oer"></progress-ring>
+        <script>
+          class ProgressRing extends HTMLElement {
+            constructor() {
+              super();
+              const stroke = this.getAttribute('stroke');
+              const radius = this.getAttribute('radius');
+              const normalizedRadius = radius - stroke * 2;
+              this._circumference = normalizedRadius * 2 * Math.PI;
+
+              this._root = this.attachShadow({
+                mode: 'open'
+              });
+              this._root.innerHTML = `
+      <svg
+        height="${radius * 2}"
+        width="${radius * 2}"
+       >
+         <circle
+           stroke="#465ae0"
+           stroke-dasharray="${this._circumference} ${this._circumference}"
+           style="stroke-dashoffset:${this._circumference}"
+           stroke-width="${stroke}"
+           fill="transparent"
+           r="${normalizedRadius}"
+           cx="${radius}"
+           cy="${radius}"
+        />
+      </svg>
+
+      <style>
+        circle {
+          transition: stroke-dashoffset 0.35s;
+          transform: rotate(-90deg);
+          transform-origin: 50% 50%;
+          stroke-linecap: round;
+        }
+      </style>
+    `;
+            }
+
+            setProgress(percent) {
+              const offset = this._circumference - (percent / 100 * this._circumference);
+              const circle = this._root.querySelector('circle');
+              circle.style.strokeDashoffset = offset;
+            }
+
+            static get observedAttributes() {
+              return ['progress'];
+            }
+
+            attributeChangedCallback(name, oldValue, newValue) {
+              if (name === 'progress') {
+                this.setProgress(newValue);
+              }
+            }
+          }
+
+          window.customElements.define('progress-ring', ProgressRing);
+
+           // emulate progress attribute change
+          let progress = 0;
+          const el = document.querySelector('progress-ring');
+
+          const interval = setInterval(() => {
+            var today = new Date();
+            var h = today.getHours();
+            var m = today.getMinutes();
+            var s = today.getSeconds();
+            progress = s * 1.666;
+            el.setAttribute('progress', progress);
+            if (progress === 100)
+              clearInterval(interval);
+          }, 1000);
+        </script>
+        <p class="gwd-p-gxbq">25°</p>
       </div>
     </gwd-page>
     <gwd-page id="page1_1" class="gwd-page-wrapper page1-content gwd-lightbox gwd-page-1ud7" data-gwd-width="800px" data-gwd-height="480px">
