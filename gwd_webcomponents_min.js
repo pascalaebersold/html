@@ -1,5 +1,4 @@
 "undefined"==typeof document.register&&(document.register=function(a){return document.registerElement.apply(document,arguments)});document.createElement||(document.createElement=document.constructor.prototype.createElement,document.createElementNS=document.constructor.prototype.createElementNS);
-
 /**
  * @license
  * Copyright (c) 2014 The Polymer Project Authors. All rights reserved.

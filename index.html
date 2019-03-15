@@ -2,7 +2,7 @@
 <html><head>
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"><meta http-equiv="Pragma" content="no-cache"><meta http-equiv="Expires" content="0"><meta charset="utf-8">
   <title>undefined</title>
-  <meta name="generator" content="Google Web Designer 5.0.2.0115">
+  <meta name="generator" content="Google Web Designer 5.0.4.0226">
   <meta name="template" content="Expandable 3.0.0">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="gwdpage_style.css" rel="stylesheet" data-version="12" data-exports-type="gwd-page">
@@ -10,7 +10,7 @@
   <link href="gwdimage_style.css" rel="stylesheet" data-version="12" data-exports-type="gwd-image">
   <link href="gwdgesture_style.css" rel="stylesheet" data-version="6" data-exports-type="gwd-gesture">
   <link href="gwdgallerynavigation_style.css" rel="stylesheet" data-version="5" data-exports-type="gwd-gallerynavigation">
-  <link href="gwdswipegallery_style.css" rel="stylesheet" data-version="23" data-exports-type="gwd-swipegallery">
+  <link href="gwdswipegallery_style.css" rel="stylesheet" data-version="24" data-exports-type="gwd-swipegallery">
   <style type="text/css" id="gwd-lightbox-style">.gwd-lightbox {
     overflow: hidden;
 }</style>
@@ -460,6 +460,51 @@ body {
     font-size: 35px;
     left: 720px;
     top: 420px;
+}
+.gwd-div-cia0 {
+    left: 282px;
+    top: 171px;
+}
+.gwd-span-1xrj {
+    position: absolute;
+    font-family: Arial;
+    font-size: 25px;
+    color: rgb(70, 90, 224);
+    left: 323px;
+    top: 11px;
+}
+.gwd-imagebutton-ynrk {
+    top: 77px;
+    left: 93px;
+}
+.gwd-imagebutton-va41 {
+    top: 247px;
+    left: 93px;
+}
+.gwd-imagebutton-xll5 {
+    top: 77px;
+    left: 472px;
+}
+.gwd-imagebutton-1j9v {
+    top: 247px;
+    left: 472px;
+}
+.gwd-imagebutton-6bnh {
+    left: 357px;
+    top: 174px;
+}
+.gwd-span-zwzq {
+    position: absolute;
+    font-family: Arial;
+    font-size: 25px;
+    color: rgb(70, 90, 224);
+    width: 67px;
+    height: 28px;
+    transform-origin: 28.2105px 29.4056px 0px;
+    -webkit-transform-origin: 28.2105px 29.4056px 0px;
+    -moz-transform-origin: 28.2105px 29.4056px 0px;
+    left: 357px;
+    top: 11px;
 }</style>
   <script data-source="googbase_min.js" data-version="4" data-exports-type="googbase" src="googbase_min.js"></script>
   <script data-source="gwd_webcomponents_min.js" data-version="6" data-exports-type="gwd_webcomponents" src="gwd_webcomponents_min.js"></script>
@@ -638,6 +683,25 @@ body {
       // GWD Predefined Function
       gwd.actions.gwdPagedeck.goToPage('pagedeck', 'page1_8', 'none', 1000, 'linear', 'top');
     };
+    gwd.auto_settings_45 = function(event) {
+      window.open("LIGHT.php")
+    };
+    gwd.auto_Gwd_imagebutton_16Click = function(event) {
+      // GWD Predefined Function
+      gwd.actions.gwdPagedeck.goToPage('pagedeck', 'page1_9', 'none', 500, 'linear', 'top');
+    };
+    gwd.auto_Gwd_imagebutton_39Click = function(event) {
+      // GWD Predefined Function
+      gwd.actions.gwdPagedeck.goToPage('pagedeck', 'page1_3', 'none', 1000, 'linear', 'top');
+    };
+    gwd.auto_Gwd_imagebutton_44Click = function(event) {
+      // GWD Predefined Function
+      gwd.actions.gwdPagedeck.goToPage('pagedeck', 'page1_3', 'none', 500, 'linear', 'top');
+    };
+    gwd.auto_Gwd_imagebutton_13Click = function(event) {
+      // GWD Predefined Function
+      gwd.actions.gwdPagedeck.goToPage('pagedeck', 'page1_10', 'none', 500, 'linear', 'top');
+    };
   </script>
   <script type="text/javascript" gwd-events="registration">
     // Support code for event handling in Google Web Designer
@@ -683,6 +747,11 @@ body {
       gwd.actions.events.addHandler('CLOCK_11', 'click', gwd.auto_clock_14, false);
       gwd.actions.events.addHandler('CLOCK_12', 'click', gwd.auto_clock_15, false);
       gwd.actions.events.addHandler('CLOCK_13', 'click', gwd.auto_clock_16, false);
+      gwd.actions.events.addHandler('gwd-imagebutton_16', 'click', gwd.auto_Gwd_imagebutton_16Click, false);
+      gwd.actions.events.addHandler('gwd-imagebutton_39', 'click', gwd.auto_Gwd_imagebutton_39Click, false);
+      gwd.actions.events.addHandler('gwd-imagebutton_44', 'click', gwd.auto_Gwd_imagebutton_44Click, false);
+      gwd.actions.events.addHandler('gwd-imagebutton_13', 'click', gwd.auto_Gwd_imagebutton_13Click, false);
+      gwd.actions.events.addHandler('gwd-imagebutton_49', 'click', gwd.auto_settings_45, false);
     };
     gwd.actions.events.deregisterEventHandlers = function(event) {
       gwd.actions.events.removeHandler('Shutdown', 'click', gwd.auto_ShutdownClick, false);
@@ -725,13 +794,18 @@ body {
       gwd.actions.events.removeHandler('CLOCK_11', 'click', gwd.auto_clock_14, false);
       gwd.actions.events.removeHandler('CLOCK_12', 'click', gwd.auto_clock_15, false);
       gwd.actions.events.removeHandler('CLOCK_13', 'click', gwd.auto_clock_16, false);
+      gwd.actions.events.removeHandler('gwd-imagebutton_16', 'click', gwd.auto_Gwd_imagebutton_16Click, false);
+      gwd.actions.events.removeHandler('gwd-imagebutton_39', 'click', gwd.auto_Gwd_imagebutton_39Click, false);
+      gwd.actions.events.removeHandler('gwd-imagebutton_44', 'click', gwd.auto_Gwd_imagebutton_44Click, false);
+      gwd.actions.events.removeHandler('gwd-imagebutton_13', 'click', gwd.auto_Gwd_imagebutton_13Click, false);
+      gwd.actions.events.removeHandler('gwd-imagebutton_49', 'click', gwd.auto_settings_45, false);
     };
     document.addEventListener("DOMContentLoaded", gwd.actions.events.registerEventHandlers);
     document.addEventListener("unload", gwd.actions.events.deregisterEventHandlers);
   </script>
   <script data-source="gwdgesture_min.js" data-version="6" data-exports-type="gwd-gesture" src="gwdgesture_min.js"></script>
   <script data-source="gwdgallerynavigation_min.js" data-version="5" data-exports-type="gwd-gallerynavigation" src="gwdgallerynavigation_min.js"></script>
-  <script data-source="gwdswipegallery_min.js" data-version="23" data-exports-type="gwd-swipegallery" src="gwdswipegallery_min.js"></script>
+  <script data-source="gwdswipegallery_min.js" data-version="24" data-exports-type="gwd-swipegallery" src="gwdswipegallery_min.js"></script>
 <style type="text/css">#pagedeck { overflow: hidden !important; }</style></head>
 
 <body class="document-body" onload="startTime()">
@@ -827,6 +901,402 @@ body {
           }, 1000);
         </script>
         <p class="gwd-p-gxbq">25°</p>
+        <style>.icon {
+    position: relative;
+    display: inline-block;
+    width: 12em;
+    height: 10em;
+    font-size: 0.9em;
+}
+.cloud {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    width: 3.6875em;
+    height: 3.6875em;
+    margin: -1.84375em;
+    background: rgb(82, 75, 75);
+    border-radius: 50%;
+    box-shadow: -2.1875em 0.6875em 0px -0.6875em, 2.0625em 0.9375em 0px -0.9375em, rgb(255, 255, 255) 0px 0px 0px 0.375em, rgb(255, 255, 255) -2.1875em 0.6875em 0px -0.3125em, rgb(255, 255, 255) 2.0625em 0.9375em 0px -0.5625em;
+}
+.cloud::after {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: -0.5em;
+    display: block;
+    width: 4.5625em;
+    height: 1em;
+    background: rgb(82, 75, 75);
+    box-shadow: rgb(255, 255, 255) 0px 0.4375em 0px -0.0625em;
+}
+.cloud:nth-child(2) {
+    z-index: 0;
+    background: rgb(255, 255, 255);
+    box-shadow: rgb(255, 255, 255) -2.1875em 0.6875em 0px -0.6875em, rgb(255, 255, 255) 2.0625em 0.9375em 0px -0.9375em, rgb(255, 255, 255) 0px 0px 0px 0.375em, rgb(255, 255, 255) -2.1875em 0.6875em 0px -0.3125em, rgb(255, 255, 255) 2.0625em 0.9375em 0px -0.5625em;
+    opacity: 0.3;
+    transform: scale(0.5) translate(6em, -3em);
+    -webkit-transform: scale(0.5) translate(6em, -3em);
+    -moz-transform: scale(0.5) translate(6em, -3em);
+    animation: cloud 4s linear 0s infinite normal none;
+    -webkit-animation: cloud 4s linear 0s infinite normal none;
+    -moz-animation: cloud 4s linear 0s infinite normal none;
+}
+.cloud:nth-child(2)::after {
+    background: rgb(255, 255, 255);
+}
+.sun {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2.5em;
+    height: 2.5em;
+    margin: -1.25em;
+    background: rgb(82, 75, 75);
+    border-radius: 50%;
+    box-shadow: rgb(180, 180, 180) 0px 0px 0px 0.375em;
+    animation: spin 12s linear 0s infinite normal none;
+    -webkit-animation: spin 12s linear 0s infinite normal none;
+    -moz-animation: spin 12s linear 0s infinite normal none;
+}
+.rays {
+    position: absolute;
+    top: -2em;
+    left: 50%;
+    display: block;
+    width: 0.375em;
+    height: 1.125em;
+    margin-left: -0.1875em;
+    background: rgb(180, 180, 180);
+    border-radius: 0.25em;
+    box-shadow: rgb(180, 180, 180) 0px 5.375em;
+}
+.rays::before,
+.rays::after {
+    content: "";
+    position: absolute;
+    top: 0em;
+    left: 0em;
+    display: block;
+    width: 0.375em;
+    height: 1.125em;
+    transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    transform-origin: 50% 3.25em 0px;
+    -webkit-transform-origin: 50% 3.25em 0px;
+    -moz-transform-origin: 50% 3.25em 0px;
+    background: rgb(180, 180, 180);
+    border-radius: 0.25em;
+    box-shadow: rgb(180, 180, 180) 0px 5.375em;
+}
+.rays::before {
+    transform: rotate(120deg);
+    -webkit-transform: rotate(120deg);
+    -moz-transform: rotate(120deg);
+}
+.cloud + .sun {
+    margin: -2em 1em;
+}
+.rain,
+.lightning,
+.snow {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    width: 3.75em;
+    height: 3.75em;
+    margin: 0.375em 0px 0px -2em;
+    background: rgb(82, 75, 75);
+}
+.rain::after {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    width: 1.125em;
+    height: 1.125em;
+    margin: -1em 0px 0px -0.25em;
+    background: rgb(0, 204, 255);
+    border-radius: 100% 60% 0px 60% 100% 50%;
+    box-shadow: rgba(255, 255, 255, 0.2) 0.625em 0.875em 0px -0.125em, rgba(255, 255, 255, 0.2) -0.875em 1.125em 0px -0.125em, rgba(255, 255, 255, 0.2) -1.375em -0.125em 0px;
+    transform: rotate(-28deg);
+    -webkit-transform: rotate(-28deg);
+    -moz-transform: rotate(-28deg);
+    animation: rain 3s linear 0s infinite normal none;
+    -webkit-animation: rain 3s linear 0s infinite normal none;
+    -moz-animation: rain 3s linear 0s infinite normal none;
+}
+.bolt {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -0.25em 0px 0px -0.125em;
+    color: rgb(255, 255, 255);
+    opacity: 0.3;
+    animation: lightning 2s linear 0s infinite normal none;
+    -webkit-animation: lightning 2s linear 0s infinite normal none;
+    -moz-animation: lightning 2s linear 0s infinite normal none;
+}
+.bolt:nth-child(2) {
+    width: 0.5em;
+    height: 0.25em;
+    margin: -1.75em 0px 0px -1.875em;
+    transform: translate(2.5em, 2.25em);
+    -webkit-transform: translate(2.5em, 2.25em);
+    -moz-transform: translate(2.5em, 2.25em);
+    opacity: 0.2;
+    animation: lightning 1.5s linear 0s infinite normal none;
+    -webkit-animation: lightning 1.5s linear 0s infinite normal none;
+    -moz-animation: lightning 1.5s linear 0s infinite normal none;
+}
+.bolt::before,
+.bolt::after {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    margin: -1.625em 0px 0px -1.0125em;
+    border-width: 1.25em 0.75em 0.75em 0.5em;
+    border-style: solid;
+    border-top-color: transparent;
+    border-right-color: initial;
+    border-bottom-color: initial;
+    border-left-color: transparent;
+    transform: skewX(-10deg);
+    -webkit-transform: skewX(-10deg);
+    -moz-transform: skewX(-10deg);
+}
+.bolt::after {
+    margin: -0.25em 0px 0px -0.25em;
+    border-width: 0.75em 0.5em 1.25em 0.75em;
+    border-style: solid;
+    border-top-color: initial;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: initial;
+    transform: skewX(-10deg);
+    -webkit-transform: skewX(-10deg);
+    -moz-transform: skewX(-10deg);
+}
+.bolt:nth-child(2)::before {
+    margin: -0.75em 0px 0px -0.5em;
+    border-width: 0.625em 0.375em 0.375em 0.25em;
+    border-style: solid;
+    border-top-color: transparent;
+    border-right-color: initial;
+    border-bottom-color: initial;
+    border-left-color: transparent;
+}
+.bolt:nth-child(2)::after {
+    margin: -0.125em 0px 0px -0.125em;
+    border-width: 0.375em 0.25em 0.625em 0.375em;
+    border-style: solid;
+    border-top-color: initial;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: initial;
+}
+.flake::before,
+.flake::after {
+    content: "❄";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -1.025em 0px 0px -1.0125em;
+    color: rgb(255, 255, 255);
+    opacity: 0.2;
+    animation: spin 8s linear 0s infinite reverse none;
+    -webkit-animation: spin 8s linear 0s infinite reverse none;
+    -moz-animation: spin 8s linear 0s infinite reverse none;
+}
+.flake::after {
+    margin: 0.125em 0px 0px -1em;
+    font-size: 1.5em;
+    opacity: 0.4;
+    animation: spin 14s linear 0s infinite normal none;
+    -webkit-animation: spin 14s linear 0s infinite normal none;
+    -moz-animation: spin 14s linear 0s infinite normal none;
+}
+.flake:nth-child(2)::before {
+    margin: -0.5em 0px 0px 0.25em;
+    font-size: 1.25em;
+    opacity: 0.2;
+    animation: spin 10s linear 0s infinite normal none;
+    -webkit-animation: spin 10s linear 0s infinite normal none;
+    -moz-animation: spin 10s linear 0s infinite normal none;
+}
+.flake:nth-child(2)::after {
+    margin: 0.375em 0px 0px 0.125em;
+    font-size: 2em;
+    opacity: 0.4;
+    animation: spin 16s linear 0s infinite reverse none;
+    -webkit-animation: spin 16s linear 0s infinite reverse none;
+    -moz-animation: spin 16s linear 0s infinite reverse none;
+}
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+    }
+}
+@-webkit-keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+@-moz-keyframes spin {
+    100% {
+        -moz-transform: rotate(360deg);
+    }
+}
+@keyframes cloud {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.3;
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0.5) translate(-200%, -3em);
+        -webkit-transform: scale(0.5) translate(-200%, -3em);
+        -moz-transform: scale(0.5) translate(-200%, -3em);
+    }
+}
+@-webkit-keyframes cloud {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.3;
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: scale(0.5) translate(-200%, -3em);
+    }
+}
+@-moz-keyframes cloud {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.3;
+    }
+    100% {
+        opacity: 0;
+        -moz-transform: scale(0.5) translate(-200%, -3em);
+    }
+}
+@keyframes rain {
+    0% {
+        background: rgb(0, 204, 255);
+        box-shadow: rgba(255, 255, 255, 0.2) 0.625em 0.875em 0px -0.125em, rgba(255, 255, 255, 0.2) -0.875em 1.125em 0px -0.125em, rgb(0, 204, 255) -1.375em -0.125em 0px;
+    }
+    25% {
+        box-shadow: rgba(255, 255, 255, 0.2) 0.625em 0.875em 0px -0.125em, rgb(0, 204, 255) -0.875em 1.125em 0px -0.125em, rgba(255, 255, 255, 0.2) -1.375em -0.125em 0px;
+    }
+    50% {
+        background: rgba(255, 255, 255, 0.3);
+        box-shadow: rgb(0, 204, 255) 0.625em 0.875em 0px -0.125em, rgba(255, 255, 255, 0.2) -0.875em 1.125em 0px -0.125em, rgba(255, 255, 255, 0.2) -1.375em -0.125em 0px;
+    }
+    100% {
+        box-shadow: rgba(255, 255, 255, 0.2) 0.625em 0.875em 0px -0.125em, rgba(255, 255, 255, 0.2) -0.875em 1.125em 0px -0.125em, rgb(0, 204, 255) -1.375em -0.125em 0px;
+    }
+}
+@-webkit-keyframes rain {
+    0% {
+        background: rgb(0, 204, 255);
+        box-shadow: rgba(255, 255, 255, 0.2) 0.625em 0.875em 0px -0.125em, rgba(255, 255, 255, 0.2) -0.875em 1.125em 0px -0.125em, rgb(0, 204, 255) -1.375em -0.125em 0px;
+    }
+    25% {
+        box-shadow: rgba(255, 255, 255, 0.2) 0.625em 0.875em 0px -0.125em, rgb(0, 204, 255) -0.875em 1.125em 0px -0.125em, rgba(255, 255, 255, 0.2) -1.375em -0.125em 0px;
+    }
+    50% {
+        background: rgba(255, 255, 255, 0.3);
+        box-shadow: rgb(0, 204, 255) 0.625em 0.875em 0px -0.125em, rgba(255, 255, 255, 0.2) -0.875em 1.125em 0px -0.125em, rgba(255, 255, 255, 0.2) -1.375em -0.125em 0px;
+    }
+    100% {
+        box-shadow: rgba(255, 255, 255, 0.2) 0.625em 0.875em 0px -0.125em, rgba(255, 255, 255, 0.2) -0.875em 1.125em 0px -0.125em, rgb(0, 204, 255) -1.375em -0.125em 0px;
+    }
+}
+@-moz-keyframes rain {
+    0% {
+        background: rgb(0, 204, 255);
+        box-shadow: rgba(255, 255, 255, 0.2) 0.625em 0.875em 0px -0.125em, rgba(255, 255, 255, 0.2) -0.875em 1.125em 0px -0.125em, rgb(0, 204, 255) -1.375em -0.125em 0px;
+    }
+    25% {
+        box-shadow: rgba(255, 255, 255, 0.2) 0.625em 0.875em 0px -0.125em, rgb(0, 204, 255) -0.875em 1.125em 0px -0.125em, rgba(255, 255, 255, 0.2) -1.375em -0.125em 0px;
+    }
+    50% {
+        background: rgba(255, 255, 255, 0.3);
+        box-shadow: rgb(0, 204, 255) 0.625em 0.875em 0px -0.125em, rgba(255, 255, 255, 0.2) -0.875em 1.125em 0px -0.125em, rgba(255, 255, 255, 0.2) -1.375em -0.125em 0px;
+    }
+    100% {
+        box-shadow: rgba(255, 255, 255, 0.2) 0.625em 0.875em 0px -0.125em, rgba(255, 255, 255, 0.2) -0.875em 1.125em 0px -0.125em, rgb(0, 204, 255) -1.375em -0.125em 0px;
+    }
+}
+@keyframes lightning {
+    45% {
+        color: rgb(255, 255, 255);
+        background: rgb(255, 255, 255);
+        opacity: 0.2;
+    }
+    50% {
+        color: rgb(0, 204, 255);
+        background: rgb(0, 204, 255);
+        opacity: 1;
+    }
+    55% {
+        color: rgb(255, 255, 255);
+        background: rgb(255, 255, 255);
+        opacity: 0.2;
+    }
+}
+@-webkit-keyframes lightning {
+    45% {
+        color: rgb(255, 255, 255);
+        background: rgb(255, 255, 255);
+        opacity: 0.2;
+    }
+    50% {
+        color: rgb(0, 204, 255);
+        background: rgb(0, 204, 255);
+        opacity: 1;
+    }
+    55% {
+        color: rgb(255, 255, 255);
+        background: rgb(255, 255, 255);
+        opacity: 0.2;
+    }
+}
+@-moz-keyframes lightning {
+    45% {
+        color: rgb(255, 255, 255);
+        background: rgb(255, 255, 255);
+        opacity: 0.2;
+    }
+    50% {
+        color: rgb(0, 204, 255);
+        background: rgb(0, 204, 255);
+        opacity: 1;
+    }
+    55% {
+        color: rgb(255, 255, 255);
+        background: rgb(255, 255, 255);
+        opacity: 0.2;
+    }
+}</style>
+        <div class="icon sunny gwd-div-cia0">
+          <div class="sun">
+            <div class="rays"></div>
+          </div>
+        </div>
       </div>
     </gwd-page>
     <gwd-page id="page1_1" class="gwd-page-wrapper page1-content gwd-lightbox gwd-page-1ud7" data-gwd-width="800px" data-gwd-height="480px">
@@ -945,6 +1415,31 @@ body {
           
         </p>
         <p class="gwd-p-78u9 gwd-p-j9lm text-tool-feedback">SONY TV</p>
+      </div>
+    </gwd-page>
+    <gwd-page id="page1_10" class="gwd-page-wrapper page1-content gwd-lightbox gwd-page-1ud7" data-gwd-width="800px" data-gwd-height="480px">
+      <div class="gwd-page-content page1-content gwd-div-mxhr">
+        <gwd-imagebutton id="gwd-imagebutton_44" up-image="BACK.png" over-image="BACK.png" down-image="BACK.png" scaling="auto" class="gwd-imagebutton-1hin gwd-imagebutton-1qi1 gwd-imagebutton-k795" alignment="right" data-gwd-name="Settings_40"></gwd-imagebutton>
+        <gwd-imagebutton id="gwd-imagebutton_49" up-image="ON_OFF.png" over-image="ON_OFF.png" down-image="ON_OFF.png" scaling="auto" class="gwd-imagebutton-1hin gwd-imagebutton-1qi1 gwd-imagebutton-k795 gwd-imagebutton-17j0 gwd-imagebutton-8p62 gwd-imagebutton-tz0e gwd-imagebutton-1fea gwd-imagebutton-625x gwd-imagebutton-xjsl gwd-imagebutton-yc0l gwd-imagebutton-ikv7 gwd-imagebutton-6bnh" alignment="right" data-gwd-name="Settings_45"></gwd-imagebutton>
+        <p class="gwd-p-v9sc gwd-p-1hr3" id="date1_12"></p>
+        <p class="gwd-p-5qd6 gwd-p-fgfs" id="date4_2"><br>
+          
+        </p>
+        <span class="gwd-span-zwzq">LIGHT</span>
+      </div>
+    </gwd-page>
+    <gwd-page id="page1_9" class="gwd-page-wrapper page1-content gwd-lightbox gwd-page-1ud7" data-gwd-width="800px" data-gwd-height="480px">
+      <div class="gwd-page-content page1-content gwd-div-mxhr">
+        <gwd-imagebutton id="gwd-imagebutton_39" up-image="BACK.png" over-image="BACK.png" down-image="BACK.png" scaling="auto" class="gwd-imagebutton-1hin gwd-imagebutton-1qi1 gwd-imagebutton-k795" alignment="right" data-gwd-name="Settings_35"></gwd-imagebutton>
+        <gwd-imagebutton id="gwd-imagebutton_43" up-image="FRONT_DOWN.png" over-image="FRONT_DOWN.png" down-image="FRONT_DOWN.png" scaling="auto" class="gwd-imagebutton-1hin gwd-imagebutton-1qi1 gwd-imagebutton-k795 gwd-imagebutton-1j9v" alignment="right" data-gwd-name="Settings_39"></gwd-imagebutton>
+        <gwd-imagebutton id="gwd-imagebutton_42" up-image="FRONT_UP.png" over-image="FRONT_UP.png" down-image="FRONT_UP.png" scaling="auto" class="gwd-imagebutton-1hin gwd-imagebutton-1qi1 gwd-imagebutton-k795 gwd-imagebutton-xll5" alignment="right" data-gwd-name="Settings_38"></gwd-imagebutton>
+        <gwd-imagebutton id="gwd-imagebutton_41" up-image="PATION_DOWN.png" over-image="PATION_DOWN.png" down-image="PATION_DOWN.png" scaling="auto" class="gwd-imagebutton-1hin gwd-imagebutton-1qi1 gwd-imagebutton-k795 gwd-imagebutton-va41" alignment="right" data-gwd-name="Settings_37"></gwd-imagebutton>
+        <gwd-imagebutton id="gwd-imagebutton_40" up-image="PATION_UP.png" over-image="PATION_UP.png" down-image="PATION_UP.png" scaling="auto" class="gwd-imagebutton-1hin gwd-imagebutton-1qi1 gwd-imagebutton-k795 gwd-imagebutton-ynrk" alignment="right" data-gwd-name="Settings_36"></gwd-imagebutton>
+        <p class="gwd-p-v9sc gwd-p-1hr3" id="date1_11"></p>
+        <p class="gwd-p-5qd6 gwd-p-fgfs" id="date4_1"><br>
+          
+        </p>
+        <span class="gwd-span-1xrj">ROLL-TOP</span>
       </div>
     </gwd-page>
   </gwd-pagedeck>
